@@ -1,0 +1,23 @@
+{% extends 'landing/base.html' %}
+{% block content %}
+{% load static  %}
+<div class="container">
+    <div class="row justify-content-center mt-5 vertical-center">
+        <img src="{% static 'assets/img/logo.jpg' %}" style="width: 154px;">
+    </div>
+    <div class="row justify-content-center mt-2 vertical-center">
+        <h1>Welkom bij poep!</h1>
+    </div>
+    <div class="row justify-content-center mt-1 vertical-center">
+        <div class="col-md-2 col-sm-5 text-center">
+            <div class="d-flex justify-content-center mt-5 vertical-center">
+                <a href="{% url 'account_signup' %}" class="btn btn-primary btn-block text-white btn-user" type="submit" style="font-size: 18px;">Registreren</a>
+            </div>
+            <div class="d-flex justify-content-center mt-5 vertical-center">
+                <a href="{% url 'account_login' %}" class="btn btn-primary btn-block text-white btn-user" type="submit" style="font-size: 18px;">Login</a>  
+            </div>
+            <div class="d-flex justify-content-center mt-3 vertical-center"></div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

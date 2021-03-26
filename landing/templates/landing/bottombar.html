@@ -1,0 +1,19 @@
+{% load static %}
+<!--bottomnavbar -->
+<div class="article-dual-column"></div>
+    <div></div>
+    <div class="text-center d-flex footer-dark" style="position: sticky;background-color: rgb(255,255,255);margin-bottom: 0px;">
+        <footer></footer>
+        <div class="col-md-3"><a         
+            {% if user.is_authenticated %} 
+            href="{% url 'post-list' %}" 
+            {% else %}
+            href="{% url 'index' %}" 
+            {% endif %} >
+            <i class="fa fa-home" style="color: rgb(0,190,40);font-size: 60px;"></i></a>
+        </div>
+        <div class="col-md-3"><i class="fa fa-search" style="font-size: 60px;color: rgb(0,190,40);"></i></div>
+        <div class="col text-center"><i class="fa fa-cloud-upload" style="color: rgb(0,191,37);font-size: 60px;"></i></div>
+        <div class="col-md-3 col-xl-3 offset-xl-0"><i class="fa fa-thumbs-up" style="font-size: 60px;color: rgb(0,191,37);"></i></div>
+        <div class="col-md-3 col-xl-3"><a href="{% url 'profile' user.profile.pk %}"><i class="fa fa-user" style="font-size: 60px;color: rgb(0,190,40);"></a></i></div>
+    </div>
